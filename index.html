@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bolan'lé Techs & Services offre des solutions informatiques, abonnements streaming, paiement de factures et e-services à Porto-Novo, Bénin.">
+  <meta name="keywords" content="services informatiques, développement web, abonnements streaming, paiement factures, e-services, déblocage téléphone, Porto-Novo">
+  <meta name="author" content="Bolan'lé Techs & Services">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Bolan'lé Techs & Services - Solutions Informatiques à Porto-Novo">
+  <meta property="og:description" content="Découvrez nos services informatiques, streaming, et e-services à Porto-Novo, Bénin.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1516321310764-8d8c9461d232?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80">
+  <meta property="og:url" content="https://bolanletechs.com">
+  <meta property="og:type" content="website">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bolan'lé Techs & Services - Solutions Informatiques">
+  <meta name="twitter:description" content="Services informatiques, streaming, et e-services à Porto-Novo.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1516321310764-8d8c9461d232?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80">
+  <title>Bolan'lé Techs & Services</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <!-- Placeholder Tawk.to Script -->
+  <script>
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/your-tawk-id/default'; // Remplacer par ton ID Tawk.to
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      border: 2px solid #34D399;
+    }
+    @keyframes slideIn {
+      0% { transform: translateX(50px); opacity: 0; }
+      100% { transform: translateX(0); opacity: 1; }
+    }
+    .animate-slideIn {
+      animation: slideIn 1s ease-out;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      align-items: center;
+      justify-content: center;
+    }
+    .modal-content {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      max-width: 500px;
+      width: 90%;
+    }
+    .modal.show {
+      display: flex;
+    }
+    .faq-item {
+      cursor: pointer;
+    }
+    .faq-answer {
+      display: none;
+    }
+    .faq-answer.show {
+      display: block;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/qr/CG4LYP7XXKQIE1?text=Bonjour%20je%20suis%20int%C3%A9ress%C3%A9%20par%20vos%20services" class="fixed bottom-16 right-4 bg-green-500 p-3 rounded-full shadow-lg hover:bg-green-600 transition z-20" aria-label="Contactez-nous sur WhatsApp">
+    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.87.51 3.64 1.41 5.17L2 22l4.83-1.41C8.36 21.49 10.13 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm3.79 15.57c-.43 1.23-1.27 2.23-2.49 2.56-1.03.28-2.09.07-3.03-.51-1.97-.92-3.62-2.61-4.53-4.58-.92-1.97-1-4.09-.29-6.15.36-1.03 1.01-1.92 1.97-2.54.28-.18.59-.28.91-.28.15 0 .3.03.44.09.15.06.29.15.41.28l.91 1.12c.15.18.24.41.24.65 0 .24-.09.47-.24.65l-.65.74c-.12.15-.18.33-.15.51.15.74.53 1.47 1.12 2.06.59.59 1.32.97 2.06 1.12.18.03.36-.03.51-.15l.74-.65c.18-.15.41-.24.65-.24s.47.09.65.24l1.12.91c.12.12.21.27.27.44.06.15.09.3.09.44 0 .33-.1.65-.28.91z"/></svg>
+  </a>
+
+  <!-- Hero Section -->
+  <section id="home" class="min-h-screen flex items-center bg-gradient-to-r from-blue-900 to-blue-600 text-white pt-16">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+      <div class="md:w-1/2 fade-in">
+        <h2 class="text-4xl md:text-6xl font-bold mb-4">Solutions Informatiques à Porto-Novo</h2>
+        <p class="text-lg mb-6">Votre partenaire à Porto-Novo pour des solutions informatiques innovantes, abonnements streaming, et services numériques.</p>
+        <div class="flex space-x-4">
+          <a href="#contact" class="bg-green-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-600 transition">Contactez-nous</a>
+          <a href="https://wa.me/qr/CG4LYP7XXKQIE1?text=Bonjour%20je%20suis%20int%C3%A9ress%C3%A9%20par%20vos%20services" class="bg-yellow-400 text-blue-900 px-6 py-3 rounded-full font-semibold hover:bg-yellow-500 transition">Chat Now</a>
+        </div>
+      </div>
+      <div class="md:w-1/2 mt-8 md:mt-0">
+        <img src="https://images.unsplash.com/photo-1516321310764-8d8c9461d232?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Tech professional coding" class="rounded-lg shadow-lg animate-slideIn" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- Search Section -->
+  <section id="search" class="py-10 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl font-bold text-center mb-6 fade-in text-gray-900">Rechercher un service</h2>
+      <input type="text" id="search" class="w-full max-w-md mx-auto p-3 rounded bg-gray-100 border border-gray-300 focus:outline-none focus:border-green-500" placeholder="Ex. Netflix, Développement Web..." aria-label="Rechercher des services ou articles">
+      <div id="search-results" class="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12 fade-in text-gray-900">À propos de nous</h2>
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 fade-in">
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Team collaborating in tech environment" class="rounded-lg shadow-lg" loading="lazy">
+        </div>
+        <div class="md:w-1/2 mt-8 md:mt-0 md:pl-8 fade-in">
+          <p class="text-lg mb-4 text-gray-700">Bolan'lé Techs & Services est votre expert local à Porto-Novo pour des solutions informatiques et numériques. Nous proposons des services variés : développement web/mobile, maintenance informatique, abonnements streaming, paiement de factures, et e-services comme les cartes CIP et biométriques.</p>
+          <p class="text-lg text-gray-700">Avec une approche centrée sur le client, nous simplifions votre quotidien grâce à des solutions rapides et fiables.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12 fade-in text-gray-900">Nos Services</h2>
+      <!-- Abonnements Streaming -->
+      <h3 class="text-2xl font-semibold mb-8 text-gray-900">Abonnements Streaming</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div class="bg-white p-6 rounded-lg shadow-lg service-card transition fade-in">
+          <i class="fa-brands fa-netflix text-4xl text-red-600 mb-4"></i>
+          <h3 class="text-xl font-semibold text-gray-900">Netflix</h3>
+          <p class="mt-2 text-gray-700">Abonnements Netflix pour vos séries et films préférés.</p>
+          <button onclick="openModal('netflix')" class="mt-4 text-green-500 hover:text-green-600">En savoir plus</button>
+          <a href="https://me.fedapay.com/GxwLaQV6?success_url=https://bolanletechs.com/paiement-reussi.html" class="mt-2 block bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">Payer</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg service-card transition fade-in">
+          <i class="fa-solid fa-tv text-4xl text-blue-600 mb-4"></i>
+          <h3 class="text-xl font-semibold text-gray-900">Canal+</h3>
+          <p class="mt-2 text-gray-700">Accédez à Canal+ pour des chaînes sportives et divertissantes.</p>
+          <button onclick="openModal('canal')" class="mt-4 text-green-500 hover:text-green-600">En savoir plus</button>
+          <a href="https://me.fedapay.com/r6wzPaMV?success_url=https://bolanletechs.com/paiement-reussi.html" class="mt-2 block bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">Payer</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg service-card transition fade-in">
+          <i class="fa-solid fa-futbol text-4xl text-green-600 mb-4"></i>
+          <h3 class="text-xl font-semibold text-gray-900">BeIN Sports</h3>
+          <p class="mt-2 text-gray-700">Regardez vos matchs préférés avec BeIN Sports.</p>
+          <button onclick="openModal('bein')" class="mt-4 text-green-500 hover:text-green-600">En savoir plus</button>
+          <a href="https://me.fedapay.com/juW_p0NR?success_url=https://bolanletechs.com/paiement-reussi.html" class="mt-2 block bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">Payer</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg service-card transition fade-in">
+          <i class="fa-brands fa-telegram text-4xl text-blue-400 mb-4"></i>
+          <h3 class="text-xl font-semibold text-gray-900">Telegram Premium</h3>
+          <p class="mt-2 text-gray-700">Profitez des fonctionnalités avancées de Telegram.</p>
+          <button onclick="openModal('telegram')" class="mt-4 text-green-500 hover:text-green-600">En savoir plus</button>
+          <a href="https://me.fedapay.com/d0lTltTZ?success_url=https://bolanletechs.com/paiement-reussi.html" class="mt-2 block bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">Payer</a>
+        </div>
+      </div>
+      <!-- Paiements de Factures et E-Services -->
+      <h3 class="text-2xl font-semibold mb-8 text-gray-900">Paiements de Factures et E-Services</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div class="bg-white p-6 rounded-lg shadow-lg service-card transition fade-in">
+          <i class="fa-solid fa-bolt text-4xl text-yellow-500 mb-4"></i>
+          <h3 class="text-xl font-semibold text-gray-900">Factures d'Électricité</h3>
+          <p class="mt-2 text-gray-700">Payez vos factures d'électricité rapidement et en toute sécurité.</p>
+          <button onclick="openModal('electricity')" class="mt-4 text-green-500 hover:text-green-600">En savoir plus</button>
+          <a href="https://me.fedapay.com/ax_u4w5p?success_url=https://bolanletechs.com/paiement-reussi.html" class="mt-2 block bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">Payer</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg service-card transition fade-in">
+          <i class="fa-solid fa-droplet text-4xl text-blue-500 mb-4"></i>
+          <h3 class="text-xl font-semibold text-gray-900">Factures d'Eau</h3>
+          <p class="mt-2 text-gray-700">Réglez vos factures d'eau facilement via nos services.</p>
+          <button onclick="openModal('water')" class="mt-4 text-green-500 hover:text-green-600">En savoir plus</button>
+          <a href="https://me.fedapay.com/OqoWIJhF?success_url=https://bolanletechs.com/paiement-reussi.html" class="mt-2 block bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">Payer</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg service-card transition fade-in">
+          <i class="fa-solid fa-id-card text-4xl text-gray-600 mb-4"></i>
+          <h3 class="text-xl font-semibold text-gray-900">Carte CIP</h3>
+          <p class="mt-2 text-gray-700">Obtenez votre carte CIP pour vos besoins professionnels.</p>
+          <button onclick="openModal('cip')" class="mt-4 text-green-500 hover:text-green-600">En savoir plus</button>
+          <a href="https://me.fedapay.com/dba31e6x?success_url=https://bolanletechs.com/paiement-reussi.html" class="mt-2 block bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">Payer</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg service-card transition fade-in">
+          <i class="fa-solid fa-fingerprint text-4xl text-purple-500 mb-4"></i>
+          <h3 class="text-xl font-semibold text-gray-900">Carte Biométrique</h3>
+          <p class="mt-2 text-gray-700">Facilitez vos démarches avec une carte biométrique.</p>
+          <button onclick="openModal('biometric')" class="mt-4 text-green-500 hover:text-green-600">En savoir plus</button>
+          <a href="https://me.fedapay.com/zOGkw29C?success_url=https://bolanletechs.com/paiement-reussi.html" class="mt-2 block bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">Payer</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg service-card transition fade-in">
+          <i class="fa-solid fa-file-invoice text-4xl text-orange-500 mb-4"></i>
+          <h3 class="text-xl font-semibold text-gray-900">Numéro IFU</h3>
+          <p class="mt-2 text-gray-700">Obtenez votre numéro IFU pour vos activités commerciales.</p>
+          <button onclick="openModal('ifu')" class="mt-4 text-green-500 hover:text-green-600">En savoir plus</button>
+          <a href="https://me.fedapay.com/T0kz5Pu-?success_url=https://bolanletechs.com/paiement-reussi.html" class="mt-2 block bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">Payer</a>
+        </div>
+      </div>
+      <!-- Maintenance Informatique et Autres Services -->
+      <h3 class="text-2xl font-semibold mb-8 text-gray-900">Maintenance Informatique et Autres Services</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-lg service-card transition fade-in">
+          <i class="fa-solid fa-code text-4xl text-blue-700 mb-4"></i>
+          <h3 class="text-xl font-semibold text-gray-900">Développement Web/Mobile</h3>
+          <p class="mt-2 text-gray-700">Création de sites web et applications mobiles sur mesure.</p>
+          <button onclick="openModal('webdev')" class="mt-4 text-green-500 hover:text-green-600">En savoir plus</button>
+          <a href="https://wa.me/qr/CG4LYP7XXKQIE1?text=Bonjour%20je%20suis%20int%C3%A9ress%C3%A9%20par%20vos%20services" class="mt-2 block bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">Contacter</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg service-card transition fade-in">
+          <i class="fa-solid fa-laptop-medical text-4xl text-red-500 mb-4"></i>
+          <h3 class="text-xl font-semibold text-gray-900">Maintenance Informatique</h3>
+          <p class="mt-2 text-gray-700">Diagnostic, réinstallation de systèmes, et optimisation.</p>
+          <button onclick="openModal('itmaintenance')" class="mt-4 text-green-500 hover:text-green-600">En savoir plus</button>
+          <a href="https://wa.me/qr/CG4LYP7XXKQIE1?text=Bonjour%20je%20suis%20int%C3%A9ress%C3%A9%20par%20vos%20services" class="mt-2 block bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">Contacter</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg service-card transition fade-in">
+          <i class="fa-solid fa-mobile-alt text-4xl text-gray-700 mb-4"></i>
+          <h3 class="text-xl font-semibold text-gray-900">Déblocage de Téléphones</h3>
+          <p class="mt-2 text-gray-700">Réinitialisation et déverrouillage de téléphones.</p>
+          <button onclick="openModal('phoneunlock')" class="mt-4 text-green-500 hover:text-green-600">En savoir plus</button>
+          <a href="https://wa.me/qr/CG4LYP7XXKQIE1?text=Bonjour%20je%20suis%20int%C3%A9ress%C3%A9%20par%20vos%20services" class="mt-2 block bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">Contacter</a>
+        </div>
+      </div>
+    </div>
+    <!-- Service Modals -->
+    <div id="netflix-modal" class="modal">
+      <div class="modal-content">
+        <h3 class="text-xl font-semibold text-gray-900">Netflix</h3>
+        <p class="text-gray-700 mt-2">Abonnements mensuels ou annuels pour Netflix. Contactez-nous pour les tarifs.</p>
+        <button onclick="closeModal('netflix')" class="mt-4 bg-green-500 text-white px-4 py-2 rounded-full">Fermer</button>
+      </div>
+    </div>
+    <div id="canal-modal" class="modal">
+      <div class="modal-content">
+        <h3 class="text-xl font-semibold text-gray-900">Canal+</h3>
+        <p class="text-gray-700 mt-2">Accès à des chaînes premium. Paiement via FedaPay ou WhatsApp.</p>
+        <button onclick="closeModal('canal')" class="mt-4 bg-green-500 text-white px-4 py-2 rounded-full">Fermer</button>
+      </div>
+    </div>
+    <div id="bein-modal" class="modal">
+      <div class="modal-content">
+        <h3 class="text-xl font-semibold text-gray-900">BeIN Sports</h3>
+        <p class="text-gray-700 mt-2">Regardez le sport en direct. Contactez-nous pour plus d’infos.</p>
+        <button onclick="closeModal('bein')" class="mt-4 bg-green-500 text-white px-4 py-2 rounded-full">Fermer</button>
+      </div>
+    </div>
+    <div id="telegram-modal" class="modal">
+      <div class="modal-content">
+        <h3 class="text-xl font-semibold text-gray-900">Telegram Premium</h3>
+        <p class="text-gray-700 mt-2">Fonctionnalités avancées pour Telegram. Paiement rapide via FedaPay.</p>
+        <button onclick="closeModal('telegram')" class="mt-4 bg-green-500 text-white px-4 py-2 rounded-full">Fermer</button>
+      </div>
+    </div>
+    <div id="electricity-modal" class="modal">
+      <div class="modal-content">
+        <h3 class="text-xl font-semibold text-gray-900">Factures d'Électricité</h3>
+        <p class="text-gray-700 mt-2">Paiement sécurisé pour vos factures d’électricité à Porto-Novo.</p>
+        <button onclick="closeModal('electricity')" class="mt-4 bg-green-500 text-white px-4 py-2 rounded-full">Fermer</button>
+      </div>
+    </div>
+    <div id="water-modal" class="modal">
+      <div class="modal-content">
+        <h3 class="text-xl font-semibold text-gray-900">Factures d'Eau</h3>
+        <p class="text-gray-700 mt-2">Réglez vos factures d’eau facilement via WhatsApp.</p>
+        <button onclick="closeModal('water')" class="mt-4 bg-green-500 text-white px-4 py-2 rounded-full">Fermer</button>
+      </div>
+    </div>
+    <div id="cip-modal" class="modal">
+      <div class="modal-content">
+        <h3 class="text-xl font-semibold text-gray-900">Carte CIP</h3>
+        <p class="text-gray-700 mt-2">Obtention rapide de votre carte CIP. Contactez-nous pour les démarches.</p>
+        <button onclick="closeModal('cip')" class="mt-4 bg-green-500 text-white px-4 py-2 rounded-full">Fermer</button>
+      </div>
+    </div>
+    <div id="biometric-modal" class="modal">
+      <div class="modal-content">
+        <h3 class="text-xl font-semibold text-gray-900">Carte Biométrique</h3>
+        <p class="text-gray-700 mt-2">Facilitez vos démarches administratives avec une carte biométrique.</p>
+        <button onclick="closeModal('biometric')" class="mt-4 bg-green-500 text-white px-4 py-2 rounded-full">Fermer</button>
+      </div>
+    </div>
+    <div id="ifu-modal" class="modal">
+      <div class="modal-content">
+        <h3 class="text-xl font-semibold text-gray-900">Numéro IFU</h3>
+        <p class="text-gray-700 mt-2">Obtenez votre numéro IFU pour vos activités commerciales.</p>
+        <button onclick="closeModal('ifu')" class="mt-4 bg-green-500 text-white px-4 py-2 rounded-full">Fermer</button>
+      </div>
+    </div>
+    <div id="webdev-modal" class="modal">
+      <div class="modal-content">
+        <h3 class="text-xl font-semibold text-gray-900">Développement Web/Mobile</h3>
+        <p class="text-gray-700 mt-2">Sites web et apps sur mesure pour votre entreprise.</p>
+        <button onclick="closeModal('webdev')" class="mt-4 bg-green-500 text-white px-4 py-2 rounded-full">Fermer</button>
+      </div>
+    </div>
+    <div id="itmaintenance-modal" class="modal">
+      <div class="modal-content">
+        <h3 class="text-xl font-semibold text-gray-900">Maintenance Informatique</h3>
+        <p class="text-gray-700 mt-2">Réparation, optimisation, et réinstallation de systèmes.</p>
+        <button onclick="closeModal('itmaintenance')" class="mt-4 bg-green-500 text-white px-4 py-2 rounded-full">Fermer</button>
+      </div>
+    </div>
+    <div id="phoneunlock-modal" class="modal">
+      <div class="modal-content">
+        <h3 class="text-xl font-semibold text-gray-900">Déblocage de Téléphones</h3>
+        <p class="text-gray-700 mt-2">Déverrouillage rapide pour mots de passe oubliés ou problèmes techniques.</p>
+        <button onclick="closeModal('phoneunlock')" class="mt-4 bg-green-500 text-white px-4 py-2 rounded-full">Fermer</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12 fade-in text-gray-900">Ce que disent nos clients</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-gray-100 p-6 rounded-lg shadow-lg fade-in flex items-start">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Client avatar" class="w-12 h-12 rounded-full mr-4" loading="lazy">
+          <div>
+            <p class="text-gray-700 mb-4">"Bolan'lé Techs a créé un site web incroyable pour mon entreprise. Très professionnel !"</p>
+            <p class="font-semibold text-gray-900">Jean D.</p>
+          </div>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-lg shadow-lg fade-in flex items-start">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Client avatar" class="w-12 h-12 rounded-full mr-4" loading="lazy">
+          <div>
+            <p class="text-gray-700 mb-4">"Le déblocage de mon téléphone a été rapide et efficace. Super service !"</p>
+            <p class="font-semibold text-gray-900">Amina K.</p>
+          </div>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-lg shadow-lg fade-in flex items-start">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Client avatar" class="w-12 h-12 rounded-full mr-4" loading="lazy">
+          <div>
+            <p class="text-gray-700 mb-4">"Mon PC est comme neuf après leur intervention. Merci !"</p>
+            <p class="font-semibold text-gray-900">Paul M.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12 fade-in text-gray-900">Portfolio</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-4 rounded-lg shadow-lg fade-in">
+          <img src="https://images.unsplash.com/photo-1551288049-b1b3a70f3b1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="E-commerce website project" class="h-48 w-full object-cover rounded-t-lg" loading="lazy">
+          <h3 class="text-xl font-semibold mt-4 text-gray-900">Site E-commerce</h3>
+          <p class="mt-2 text-gray-700">Boutique en ligne avec paiement sécurisé via FedaPay, responsive et optimisée pour SEO.</p>
+          <a href="/portfolio.html#ecommerce" class="mt-2 block text-green-500 hover:text-green-600">Voir plus</a>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow-lg fade-in">
+          <img src="https://images.unsplash.com/photo-1616499372085-4196d4e6a7e6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Mobile task management app" class="h-48 w-full object-cover rounded-t-lg" loading="lazy">
+          <h3 class="text-xl font-semibold mt-4 text-gray-900">Application Mobile</h3>
+          <p class="mt-2 text-gray-700">App de gestion de tâches pour Android/iOS, avec synchronisation cloud.</p>
+          <a href="/portfolio.html#mobileapp" class="mt-2 block text-green-500 hover:text-green-600">Voir plus</a>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow-lg fade-in">
+          <img src="https://images.unsplash.com/photo-1516321310764-8d8c9461d232?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Windows system optimization" class="h-48 w-full object-cover rounded-t-lg" loading="lazy">
+          <h3 class="text-xl font-semibold mt-4 text-gray-900">Maintenance PC</h3>
+          <p class="mt-2 text-gray-700">Optimisation complète d’un système Windows, suppression de virus et mise à jour.</p>
+          <a href="/portfolio.html#maintenance" class="mt-2 block text-green-500 hover:text-green-600">Voir plus</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section id="blog" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12 fade-in text-gray-900">Blog</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-gray-100 p-6 rounded-lg shadow-lg fade-in">
+          <img src="https://images.unsplash.com/photo-1611162617210-7d673bf0f397?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Phone unlocking guide" class="h-40 w-full object-cover rounded-t-lg" loading="lazy">
+          <h3 class="text-xl font-semibold mb-4 text-gray-900">Comment Débloquer Votre Téléphone en Toute Sécurité</h3>
+          <p class="text-gray-700 mb-4">Apprenez à déverrouiller votre téléphone si vous avez oublié le mot de passe ou rencontrez des problèmes techniques.</p>
+          <a href="/blog.html#phoneunlock" class="text-green-500 hover:text-green-600">Lire plus</a>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-lg shadow-lg fade-in">
+          <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e275?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Streaming services guide" class="h-40 w-full object-cover rounded-t-lg" loading="lazy">
+          <h3 class="text-xl font-semibold mb-4 text-gray-900">Choisir le Meilleur Service de Streaming à Bénin</h3>
+          <p class="text-gray-700 mb-4">Netflix, Canal+, ou BeIN Sports ? Découvrez quel service correspond à vos besoins.</p>
+          <a href="/blog.html#streaming" class="text-green-500 hover:text-green-600">Lire plus</a>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-lg shadow-lg fade-in">
+          <img src="https://images.unsplash.com/photo-1590247813695-c6d3e7f7a599?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Bill payment guide" class="h-40 w-full object-cover rounded-t-lg" loading="lazy">
+          <h3 class="text-xl font-semibold mb-4 text-gray-900">Payer Vos Factures Facilement</h3>
+          <p class="text-gray-700 mb-4">Simplifiez le paiement de vos factures d’eau et d’électricité avec nos services.</p>
+          <a href="/blog.html#bills" class="text-green-500 hover:text-green-600">Lire plus</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12 fade-in text-gray-900">Foire Aux Questions</h2>
+      <div class="space-y-4">
+        <div class="faq-item bg-white p-4 rounded-lg shadow-lg fade-in">
+          <h3 class="text-lg font-semibold text-gray-900">Comment configurer le formulaire de contact ?</h3>
+          <div class="faq-answer text-gray-700 mt-2">
+            <p>Inscrivez-vous sur <a href="https://formspree.io" class="text-green-500 hover:text-green-600">Formspree.io</a> avec votre e-mail (adioblw54@gmail.com). Créez un formulaire, récupérez l’endpoint (ex. https://formspree.io/f/xxxxxxxx), et mettez-le dans l’attribut <code>action</code> du formulaire. Testez en envoyant un message.</p>
+          </div>
+        </div>
+        <div class="faq-item bg-white p-4 rounded-lg shadow-lg fade-in">
+          <h3 class="text-lg font-semibold text-gray-900">Puis-je ajouter d’autres champs au formulaire ?</h3>
+          <div class="faq-answer text-gray-700 mt-2">
+            <p>Oui, nous avons ajouté un champ "Service" (liste déroulante). Pour d’autres champs (ex. téléphone), modifiez le HTML avec un nouvel <code>&lt;input&gt;</code> et configurez Formspree pour accepter les données supplémentaires.</p>
+          </div>
+        </div>
+        <div class="faq-item bg-white p-4 rounded-lg shadow-lg fade-in">
+          <h3 class="text-lg font-semibold text-gray-900">Comment personnaliser le style du formulaire ?</h3>
+          <div class="faq-answer text-gray-700 mt-2">
+            <p>Le formulaire utilise des boutons verts pour uniformité. Pour changer les couleurs, modifiez les classes Tailwind (ex. <code>bg-green-500</code> à <code>bg-blue-500</code>) ou ajoutez du CSS personnalisé dans la balise <code>&lt;style&gt;</code>.</p>
+          </div>
+        </div>
+        <div class="faq-item bg-white p-4 rounded-lg shadow-lg fade-in">
+          <h3 class="text-lg font-semibold text-gray-900">Dois-je garder WhatsApp et le formulaire ?</h3>
+          <div class="faq-answer text-gray-700 mt-2">
+            <p>Oui, les deux sont complémentaires. WhatsApp est rapide pour les questions courtes, le formulaire est idéal pour les demandes détaillées (ex. devis). Vous pouvez aussi activer Tawk.to pour un chat en direct.</p>
+          </div>
+        </div>
+        <div class="faq-item bg-white p-4 rounded-lg shadow-lg fade-in">
+          <h3 class="text-lg font-semibold text-gray-900">Comment activer Tawk.to ?</h3>
+          <div class="faq-answer text-gray-700 mt-2">
+            <p>Inscrivez-vous sur <a href="https://tawk.to" class="text-green-500 hover:text-green-600">Tawk.to</a>, créez un widget, et remplacez le script placeholder dans <code>&lt;head&gt;</code> par votre script personnalisé. Le chat apparaîtra en bas à droite.</p>
+          </div>
+        </div>
+        <div class="faq-item bg-white p-4 rounded-lg shadow-lg fade-in">
+          <h3 class="text-lg font-semibold text-gray-900">Comment payer via FedaPay ?</h3>
+          <div class="faq-answer text-gray-700 mt-2">
+            <p>Cliquez sur "Payer" pour un service (ex. Netflix), suivez les instructions FedaPay, et entrez vos informations de paiement. Après succès, vous serez redirigé vers une page de confirmation.</p>
+          </div>
+        </div>
+        <div class="faq-item bg-white p-4 rounded-lg shadow-lg fade-in">
+          <h3 class="text-lg font-semibold text-gray-900">Quels sont les délais pour les services ?</h3>
+          <div class="faq-answer text-gray-700 mt-2">
+            <p>Les abonnements streaming sont activés sous 24h, les paiements de factures sous 12h, et les services informatiques (ex. déblocage) dépendent du diagnostic (contactez-nous pour un devis).</p>
+          </div>
+        </div>
+        <div class="faq-item bg-white p-4 rounded-lg shadow-lg fade-in">
+          <h3 class="text-lg font-semibold text-gray-900">Puis-je vous contacter sans WhatsApp ?</h3>
+          <div class="faq-answer text-gray-700 mt-2">
+            <p>Oui, utilisez le formulaire de contact ou envoyez un e-mail à <a href="mailto:adioblw54@gmail.com" class="text-green-500 hover:text-green-600">adioblw54@gmail.com</a>. Tawk.to (chat en direct) sera bientôt disponible.</p>
+          </div>
+        </div>
+        <div class="faq-item bg-white p-4 rounded-lg shadow-lg fade-in">
+          <h3 class="text-lg font-semibold text-gray-900">Comment héberger mon site ?</h3>
+          <div class="faq-answer text-gray-700 mt-2">
+            <p>Déployez sur <a href="https://netlify.com" class="text-green-500 hover:text-green-600">Netlify</a> ou <a href="https://vercel.com" class="text-green-500 hover:text-green-600">Vercel</a> en important votre code depuis GitHub. Achetez un domaine (ex. via Namecheap) pour une URL personnalisée comme bolanletechs.com.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-blue-900 text-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12 fade-in">Contactez-nous</h2>
+      <div class="flex flex-col md:flex-row">
+        <div class="md:w-1/2 fade-in">
+          <h3 class="text-xl font-semibold mb-4">Envoyez-nous un message</h3>
+          <form action="https://formspree.io/f/xpwdwkdr" method="POST" id="contact-form">
+            <div class="mb-4">
+              <label for="name" class="block text-sm font-medium">Nom</label>
+              <input type="text" id="name" name="name" class="w-full p-2 rounded bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-green-500" required aria-describedby="name-error">
+              <p id="name-error" class="text-red-400 text-sm hidden">Veuillez entrer votre nom.</p>
+            </div>
+            <div class="mb-4">
+              <label for="email" class="block text-sm font-medium">Email</label>
+              <input type="email" id="email" name="email" class="w-full p-2 rounded bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-green-500" required aria-describedby="email-error">
+              <p id="email-error" class="text-red-400 text-sm hidden">Veuillez entrer un email valide.</p>
+            </div>
+            <div class="mb-4">
+              <label for="service" class="block text-sm font-medium">Service</label>
+              <select id="service" name="service" class="w-full p-2 rounded bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-green-500" required>
+                <option value="">Choisissez un service</option>
+                <option value="netflix">Netflix</option>
+                <option value="canal">Canal+</option>
+                <option value="bein">BeIN Sports</option>
+                <option value="telegram">Telegram Premium</option>
+                <option value="electricity">Factures d'Électricité</option>
+                <option value="water">Factures d'Eau</option>
+                <option value="cip">Carte CIP</option>
+                <option value="biometric">Carte Biométrique</option>
+                <option value="ifu">Numéro IFU</option>
+                <option value="webdev">Développement Web/Mobile</option>
+                <option value="itmaintenance">Maintenance Informatique</option>
+                <option value="phoneunlock">Déblocage de Téléphones</option>
+              </select>
+              <p id="service-error" class="text-red-400 text-sm hidden">Veuillez choisir un service.</p>
+            </div>
+            <div class="mb-4">
+              <label for="message" class="block text-sm font-medium">Message</label>
+              <textarea id="message" name="message" rows="4" class="w-full p-2 rounded bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-green-500" required aria-describedby="message-error"></textarea>
+              <p id="message-error" class="text-red-400 text-sm hidden">Veuillez entrer un message.</p>
+            </div>
+            <button type="submit" class="bg-green-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-600 transition">Envoyer</button>
+          </form>
+        </div>
+        <div class="md:w-1/2 mt-8 md:mt-0 md:pl-8 fade-in">
+          <h3 class="text-xl font-semibold mb-4">Nos coordonnées</h3>
+          <p class="mb-2">Email : <a href="mailto:adioblw54@gmail.com" class="hover:text-green-500">adioblw54@gmail.com</a></p>
+          <p class="mb-2">WhatsApp : <a href="https://wa.me/+22956148009" class="hover:text-green-500">+229 56148009</a></p>
+          <p>Adresse : Porto-Novo, Bénin</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-6">
+    <div class="container mx-auto px-4 text-center">
+      <div class="flex justify-center space-x-4 mb-4">
+        <a href="https://x.com/your-handle" target="_blank" aria-label="Suivez-nous sur X" class="hover:text-green-500 transition">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="https://linkedin.com/your-page" target="_blank" aria-label="Suivez-nous sur LinkedIn" class="hover:text-green-500 transition">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg>
+        </a>
+        <a href="https://wa.me/+22956148009" target="_blank" aria-label="Contactez-nous sur WhatsApp" class="hover:text-green-500 transition">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.87.51 3.64 1.41 5.17L2 22l4.83-1.41C8.36 21.49 10.13 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm3.79 15.57c-.43 1.23-1.27 2.23-2.49 2.56-1.03.28-2.09.07-3.03-.51-1.97-.92-3.62-2.61-4.53-4.58-.92-1.97-1-4.09-.29-6.15.36-1.03 1.01-1.92 1.97-2.54.28-.18.59-.28.91-.28.15 0 .3.03.44.09.15.06.29.15.41.28l.91 1.12c.15.18.24.41.24.65 0 .24-.09.47-.24.65l-.65.74c-.12.15-.18.33-.15.51.15.74.53 1.47 1.12 2.06.59.59 1.32.97 2.06 1.12.18.03.36-.03.51-.15l.74-.65c.18-.15.41-.24.65-.24s.47.09.65.24l1.12.91c.12.12.21.27.27.44.06.15.09.3.09.44 0 .33-.1.65-.28.91z"/></svg>
+        </a>
+      </div>
+      <!-- Mock X Post Embed -->
+      <blockquote class="twitter-tweet"><p lang="fr" dir="ltr">Découvrez nos nouveaux services à Porto-Novo ! Abonnements streaming, paiement de factures, et plus encore. Contactez-nous sur WhatsApp : +229 56148009 #Tech #PortoNovo</p>— Bolan'lé Techs (@yourhandle) <a href="https://x.com/yourhandle/status/123456789">April 26, 2025</a></blockquote>
+      <p class="mb-2">Email : <a href="mailto:adioblw54@gmail.com" class="hover:text-green-500">adioblw54@gmail.com</a> | WhatsApp : <a href="https://wa.me/+22956148009" class="hover:text-green-500">+229 56148009</a></p>
+      <p class="mb-2">Porto-Novo, Bénin</p>
+      <p class="mb-2">© 2025 Bolan'lé Techs & Services. Tous droits réservés.</p>
+      <p><a href="/privacy-policy" class="text-green-500 hover:text-green-600">Politique de confidentialité</a> | <a href="/404.html" class="text-green-500 hover:text-green-600">Page non trouvée</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // Fade-in Animation
+    const fadeElements = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    fadeElements.forEach(element => observer.observe(element));
+
+    // Contact Form Validation
+    function validateForm() {
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const service = document.getElementById('service').value;
+      const message = document.getElementById('message').value.trim();
+      const nameError = document.getElementById('name-error');
+      const emailError = document.getElementById('email-error');
+      const serviceError = document.getElementById('service-error');
+      const messageError = document.getElementById('message-error');
+      let isValid = true;
+
+      nameError.classList.add('hidden');
+      emailError.classList.add('hidden');
+      serviceError.classList.add('hidden');
+      messageError.classList.add('hidden');
+
+      if (!name) {
+        nameError.classList.remove('hidden');
+        isValid = false;
+      }
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        emailError.classList.remove('hidden');
+        isValid = false;
+      }
+      if (!service) {
+        serviceError.classList.remove('hidden');
+        isValid = false;
+      }
+      if (!message) {
+        messageError.classList.remove('hidden');
+        isValid = false;
+      }
+
+      return isValid;
+    }
+
+    document.getElementById('contact-form').addEventListener('submit', (e) => {
+      if (!validateForm()) {
+        e.preventDefault();
+      }
+    });
+
+    // Search Bar
+    const searchInput = document.getElementById('search');
+    const searchResults = document.getElementById('search-results');
+    const allItems = document.querySelectorAll('#services .service-card, #blog .fade-in');
+
+    searchInput.addEventListener('input', () => {
+      const query = searchInput.value.toLowerCase();
+      searchResults.innerHTML = '';
+      let hasResults = false;
+
+      allItems.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        if (text.includes(query) && query) {
+          const clone = item.cloneNode(true);
+          clone.classList.remove('fade-in', 'visible');
+          clone.classList.add('bg-white', 'p-4', 'rounded-lg', 'shadow-lg');
+          searchResults.appendChild(clone);
+          hasResults = true;
+        }
+      });
+
+      if (!hasResults && query) {
+        searchResults.innerHTML = '<p class="text-gray-700 text-center">Aucun résultat trouvé.</p>';
+      }
+    });
+
+    // Modal Functions
+    function openModal(id) {
+      document.getElementById(`${id}-modal`).classList.add('show');
+    }
+    function closeModal(id) {
+      document.getElementById(`${id}-modal`).classList.remove('show');
+    }
+
+    // FAQ Toggle
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const answer = item.querySelector('.faq-answer');
+        answer.classList.toggle('show');
+      });
+    });
+  </script>
+</body>
+</html>
